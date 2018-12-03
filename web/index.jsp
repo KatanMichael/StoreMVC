@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Michael Store Of Junk!</title>
   </head>
   <body>
-  $END$
+  <%
+    RequestDispatcher dispatcher = application.getRequestDispatcher("/controller");
+
+    dispatcher.forward(request,response);
+
+  %>
   </body>
 </html>
