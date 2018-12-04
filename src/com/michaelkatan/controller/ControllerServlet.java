@@ -11,8 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ControllerServlet", urlPatterns = {"/controller/*","/store","/payment","/shoppingcart"})
 
+@WebServlet(name = "ControllerServlet",
+        urlPatterns = {"/controller","/store","/shoppingcart","/payment"})
 public class ControllerServlet extends HttpServlet
 {
 
@@ -36,7 +37,7 @@ public class ControllerServlet extends HttpServlet
 
         if(requestUri.endsWith("shoppingcart"))
         {
-            dispatcher = getServletContext().getRequestDispatcher("/shoppingcart.jsp");
+            dispatcher = getServletContext().getRequestDispatcher("/shoppingCart.jsp");
 
         }
 
@@ -51,6 +52,6 @@ public class ControllerServlet extends HttpServlet
 
         dispatcher.forward(request,response);
 
-
     }
+
 }
