@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "com.michaelkatan.controller.ControllerServlet",
-        urlPatterns = {"/controller","/store","/shoppingcart","/payment"})
+@WebServlet(name = "ControllerServlet", urlPatterns = {"/controller/*","/store","/payment","/shoppingcart"})
+
 public class ControllerServlet extends HttpServlet
 {
 
@@ -48,6 +48,8 @@ public class ControllerServlet extends HttpServlet
         {
             dispatcher = getServletContext().getRequestDispatcher("/store.jsp");
         }
+
+        dispatcher.forward(request,response);
 
 
     }

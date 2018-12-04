@@ -1,3 +1,5 @@
+<%@ page import="com.michaelkatan.controller.ControllerServlet" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: micha
@@ -8,11 +10,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>Michael Store Of Junk!</title>
+    <title>Michael's Store Of Junk!</title>
   </head>
   <body>
   <%
-    RequestDispatcher dispatcher = application.getRequestDispatcher("/controller");
+    RequestDispatcher dispatcher = application.getRequestDispatcher("/controller/");
 
     dispatcher.forward(request,response);
 
