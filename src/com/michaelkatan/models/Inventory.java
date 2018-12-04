@@ -1,5 +1,6 @@
 package com.michaelkatan.models;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -7,7 +8,9 @@ public class Inventory {
     private Map<Integer, Product> products;
     private static Inventory inventory = null;
 
-    private Inventory() { }
+    private Inventory() {
+        products = new HashMap<>();
+    }
 
 
 

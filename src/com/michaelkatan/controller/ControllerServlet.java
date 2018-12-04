@@ -13,11 +13,18 @@ import java.io.IOException;
 
 
 @WebServlet(name = "ControllerServlet",
-        urlPatterns = {"/controller","/store","/shoppingcart","/payment"})
+        urlPatterns = {"/ControllerServlet","/store","/shoppingcart","/payment"})
 public class ControllerServlet extends HttpServlet
 {
 
-    Inventory inventory = Inventory.getInventory();
+    private Inventory inventory;
+
+
+    public ControllerServlet()
+    {
+
+
+    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
@@ -26,6 +33,7 @@ public class ControllerServlet extends HttpServlet
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+        inventory = Inventory.getInventory();
 
         inventory.addProduct(new Product(1,20.99,"Lenovo Yoga"));
         inventory.addProduct(new Product(2,26.99,"Asus ZenBook"));
