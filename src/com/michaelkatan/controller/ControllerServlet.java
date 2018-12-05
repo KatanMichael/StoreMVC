@@ -22,8 +22,6 @@ public class ControllerServlet extends HttpServlet
 
     public ControllerServlet()
     {
-
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -43,7 +41,7 @@ public class ControllerServlet extends HttpServlet
         String requestUri = request.getRequestURI();
 
 
-        if(requestUri.endsWith("shoppingcart"))
+        if(requestUri.endsWith("shoppingCart"))
         {
             dispatcher = getServletContext().getRequestDispatcher("/shoppingCart.jsp");
 
